@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="google-site-verification" content="Hv8bM6bOyUA90QabSL-ajoH0kmmBloWvy2z0iF8PVKs" />
+    <title>Home - Support</title>
+    <link rel=" shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body id="bdy" onload="boot()" onscroll="settingsOff()">
+
+    <div id="settings_off" onclick="settings()">
+      <i class="fa fa-angle-double-down" style="font-size:24px;"></i>
+    </div>
+    <div id="settings">
+      </label>
+      <span class="CookiesSetting" style="font-family: Montserrat; margin-left: 0.96%">Cookies</span> <span style="font-family: Montserrat; margin-left: 1.4%;">Icons</span><br>
+
+      <label class="switch">
+  <input id="id" onclick="cookieSSS()" type="checkbox" disabled>
+    <span class="slider"></span>
+      </label>
+
+      <label class="switch">
+
+  <input id="IconS" onclick="checkbox()" type="checkbox" checked>
+  <span class="slider"></span>
+      </label>
+      <button onclick="javascript:window.location.href = 'login';" style="position: absolute; right: 0;">Login</button>
+    <i onclick="settingsOff()" id="settings_on" class="fa fa-angle-double-up" style="font-size:24px;"></i>
+
+      </div>
+    <div class="Content">
+      <div class="titleDiv">
+        <br><br>
+    <a class="title"  href="/"><h1 title="Zurück zur Startseite" class="title">Techniksupport SMG</h1></a>
+          </div>
+
+
+
+
+      <div class="Content">
+        <br><br><br><br>
+      <h2>Zu welchem Thema benötigst du Hilfe ?</h2>
+      <br>
+      <div class="all">
+
+      </div>
+    <script type="text/javascript" src="script.js"></script>
+
+    <div id="fade" class="black_overlay"></div>
+    <div onscroll="rmDown()" id="light" class="white_content">
+      <h2 style="text-align:center">Cookienutzung und Datenschutz</h2>
+      <p style="text-align:center; font-size: 18px;"> <br><br>
+        Wir nutzen auf unserer Website Cookies um die von ihnen getätigten Einstellungen für 30 Tage auf ihrem Computer zu speichern
+        <br><br><br>
+        Mit der weiteren Nutzung dieser Website stimmen sie den <a href="Datenschutz" target="_blank">Datenschutzrichtlinien</a> zu
+
+          <br><br><br>
+          (Nähere Informationen zu Cookies und Datenschutz <a href="Datenschutz" target="_blank">hier</a>)</p>
+
+      <br>
+      <br><br>
+      <button title="Cookies aktzeptieren" onclick="AccC()" class="Ckbtn" style="" type="button" name="button">Aktzeptieren</button>  <button title="Cookies ablehnen" onclick="DecC()" class="CkbtnI" style="" type="button" name="button">Ablehnen</button>  <br><br><br><br><br>
+    </div>
+
+    <div class="Auswahl" id="emojis">
+      <img title="Hilfe zum Thema iPad, ggf. auch Tablets" onclick="Auswahl('iPad')" class="device" id="iPad" src="resources/iPad_Apple.svg" alt="Hilfe zum Thema iPad">
+      <img title="Hilfe zum Thema Windows" onclick="Auswahl('Windows')" class="device" class="windows" src="resources/Windows_PC.svg" alt="Hilfe zum Thema Windows">
+      <img title="Hilfe zum Thema MacOS" onclick="Auswahl('MacOS')" class="device" class="macos" src="resources/Mac_PC.svg" alt="Hilfe zum Thema MacOS">
+      <img title="Hilfe zum Thema Moodle" onclick="Auswahl('moodle')" class="device" class="moodle" src="resources/Moodle_PC.svg" alt="Hilfe zum Thema moodle">
+      <img title="Hilfe zum Thema iServ" onclick="Auswahl('iServ')" class="device" class="iserv" src="resources/IServ_PC.svg" alt="Hilfe zum Thema iServ">
+      <img class="deviceSonstiges" onclick="Auswahl('support')" src="resources/sonstiges.svg" alt="">
+
+    </div>
+    <div class="Auswahl_txt" id="noEmojis">
+      <img class="border" title="Hilfe zum Thema iPad, ggf. auch Tablets" onclick="Auswahl('iPad')" class="device" id="iPad" src="resources/iPa_Apple.svg" alt="Hilfe zum Thema iPad">
+      <img class="border" title="Hilfe zum Thema Windows" onclick="Auswahl('Windows')" class="device" class="windows" src="resources/Winows_PC.svg" alt="Hilfe zum Thema Windows">
+      <img class="border" title="Hilfe zum Thema MacOS" onclick="Auswahl('MacOS')" class="device" class="macos" src="resources/MacPC.svg" alt="Hilfe zum Thema MacOS">
+      <img class="border" title="Hilfe zum Thema Moodle" onclick="Auswahl('moodle')" class="device" class="moodle" src="resources/Modle_PC.svg" alt="Hilfe zum Thema moodle">
+      <img class="border" title="Hilfe zum Thema iServ" onclick="Auswahl('iServ')" class="device" class="iserv" src="resources/ISrv_PC.svg" alt="Hilfe zum Thema iServ">
+      <img class="deviceSonstiges" onclick="Auswahl('support')" src="resources/sontiges.svg" alt="Hilfe zu sonstigen Theme">
+    </div>
+    <br><br><br>
+
+    <div id="cont" class="container">
+  <form action="anfrage.php" method="post">
+    <label for="fname">Vorname</label>
+    <input maxlength="26" type="text" id="fname" name="Vorname" required>
+
+    <label for="lname">Nachname</label>
+    <input maxlength="26" type="text" id="lname" name="Nachname" required>
+    <label maxlength="250" for="email">Email Adresse</label>
+    <input maxlength="250" type="text" name="email" value="" required>
+    <label for="Thema">Thema</label>
+    <select name="Thema" required>
+      <option id="opt0" disabled selected>Thema wählen</option>
+      <option id="opt1">iPad</option>
+      <option id="opt2">Windows</option>
+      <option id="opt3">MacOS</option>
+      <option id="opt4">Moodle</option>
+      <option id="opt5">iServ</option>
+      <option id="opt6">Sonstiges</option>
+      </select>
+
+    <label for="subject">Nachricht</label>
+    <textarea maxlength="5000" id="subject" name="Nachricht" placeholder="Geben sie ihre Nachricht hier ein..." style="height:200px" required></textarea>
+
+    <input type="submit" value="Absenden">
+  </form>
+</div>
+<br><br><br></br><br><br><br>
+
+
+    <div class="footer">
+      <a href="/">Home</a>
+      <a href="Datenschutz" target="_blank">Datenschutz</a>
+      <a href="">Fehler melden</a>
+
+    </div>
+  </div>
+    </div>
+  </body>
+</html>
