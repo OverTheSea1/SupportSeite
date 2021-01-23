@@ -4,10 +4,7 @@ if ($_SESSION["Pannel"]== true) {
   echo "<br><h1 class='center'>Dashboard</h1>";
 
 
-  $servername = 'localhost';
-  $user = '';
-  $password = '';
-  $db = '';
+  include '../resources/dblogin.php';
 
 
 
@@ -17,7 +14,7 @@ if ($_SESSION["Pannel"]== true) {
     die('Fehler '.$con->connect_error);
   }
 
-    $count = 0; 
+    $count = 0;
 
     $sql_name = "SELECT * FROM Anfragen";
     $res = $con->query($sql_name);
@@ -86,7 +83,5 @@ if ($_SESSION["Pannel"]== true) {
 
 
 echo $count . " finished request´s";
-}else {
-  die(header('Location: ../login'));
 }
  ?>

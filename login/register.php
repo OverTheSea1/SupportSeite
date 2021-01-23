@@ -14,10 +14,7 @@
   -moz-osx-font-smoothing: grayscale;">
 <?php
 
-$servername = 'localhost';
-$user = '';
-$password = '';
-$db = '';
+include '../resources/dblogin.php';
 
 
 $con = new mysqli($servername, $user, $password, $db);
@@ -27,6 +24,7 @@ if ($con->connect_error) {
 $usrname = htmlspecialchars(trim($_POST["name"]));
 $pswd = password_hash($_POST["passwort"], PASSWORD_DEFAULT);
 $mail = htmlspecialchars(trim($_POST["mail"]));
+
 
 
   $sql = $con->prepare("SELECT Name FROM User_Support WHERE Name = ?");

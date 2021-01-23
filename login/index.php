@@ -1,6 +1,4 @@
-<?php session_start(); if ($_SESSION["Pannel"] != true) {
-  die(header('Location: ../login'));
-}?>
+<?php session_start(); ?>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -43,17 +41,14 @@
       echo "<script> console.log('Warning: Global variables empty (index.php)'); </script>";
       die();
     }
-    $servername = 'localhost';
-    $user = '';
-    $password = '';
-    $db = '';
+
+    include '../resources/dblogin.php';
 
 
     $con = new mysqli($servername, $user, $password, $db);
     if ($con->connect_error) {
       die('Fehler: '.$con->connect_error);
     }
-
 
 
       $sql = $con->prepare("SELECT Name, Passwort, Supporter FROM `User_Support` WHERE Name = ?");

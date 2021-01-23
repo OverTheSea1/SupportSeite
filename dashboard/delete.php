@@ -4,11 +4,7 @@
    if (!$_SESSION["Pannel"]==true) {
      die("Du hast keine Berechtigung" . header('Location: index.php'));
    }
-   $servername = 'localhost';
-   $user = '';
-   $password = '';
-   $db = '';
-
+  include '../resources/dblogin.php';
 
    $con = new mysqli($servername, $user, $password, $db);
    if ($con->connect_error) {

@@ -21,10 +21,7 @@
         die("<h2 style='text-align: center;'>Bitte füllen sie alle Felder aus</h2> <br> <a style='text-align: center;' href='javascript: history.back();'> zurück </a>" . "<script>setTimeout(() => { window.history.back() }, 3000);</script>");
       }
 
-        $servername = 'localhost';
-        $user = '';
-        $password = '';
-        $db = '';
+      include '../resources/dblogin.php';
 
         $con = new mysqli($servername, $user, $password, $db);
         if ($con->connect_error) {

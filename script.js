@@ -10,7 +10,7 @@ function CookieRead(){
   if (Cookies == '') {
     window.alert('Diese Seite hat auf ihrem Endgerät keine Cookies gespeichert');
   }else {
-    window.alert('Es sind momentan Cookies auf ihrem Endgerät gespeichert');
+    window.alert('Es sind momentan folgende Cookies auf ihrem Endgerät gespeichert: ' + document.cookie);
   }
 }
 function setC(){

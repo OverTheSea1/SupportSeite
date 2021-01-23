@@ -1,9 +1,7 @@
 <?php
-  $servername = 'localhost';
-  $user = '';
-  $password = '';
-  $db = '';
+  include '../resources/dblogin.php';
 
+  
   $con = new mysqli($servername, $user, $password, $db);
   if ($con->connect_error) {
     die("Fehler".$con->connect_error);

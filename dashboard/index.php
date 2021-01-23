@@ -1,7 +1,7 @@
 <?php session_start();
-if ($_SESSION["Pannel"] != true) {
-  die(header('Location: ../login'));
-}
+  if ($_SESSION["Pannel"] != true) {
+    die(header('Location: ../login'));
+  }
 ?>
 <html lang="de" dir="ltr">
   <head>
